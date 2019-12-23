@@ -13,8 +13,13 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+for i = 1:m
+    % note the column of 1s added to X (read ex1.m)
+    x_theta = theta(1) + theta(2) * X(i,2);
+    J += (x_theta - y(i)) * (x_theta - y(i));
+end
 
-
+J /= (2 * m);
 
 
 % =========================================================================

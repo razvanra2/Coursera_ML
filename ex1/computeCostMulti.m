@@ -13,9 +13,14 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+all_x_theta = X * theta;
 
+for i = 1:m
+    x_theta = all_x_theta(i);
+    J += (x_theta - y(i)) * (x_theta - y(i));
+end
 
-
+J /= (2 * m);
 
 % =========================================================================
 
